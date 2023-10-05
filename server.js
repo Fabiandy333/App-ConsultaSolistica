@@ -10,6 +10,7 @@ const { resolve } = require("path");
 // Segunda Función // Extrae Los Datos Por Su Numero De Remesa El Cual Ingresa En La Función
 const inputRemesaSolistica = async (browser, page, nRemesa,intentos=0) => {
 
+
   if (intentos >= 3) {
     console.error(
       "Se han agotado los intentos. La página no se ha cargado."
@@ -140,7 +141,7 @@ function busquedaSolis(filePath) {
 
 //Función Principal
 //Llamar a la función y pasar la ruta del archivo
-const filePath = "./Envio_Informacion_Transportador_5255014.txt";
+const filePath = "./doc_envios/Envio_Informacion_Transportador_5255014.txt";
 
 busquedaSolis(filePath).then(async (result) => {
     console.log("Números extraídos:", result);
