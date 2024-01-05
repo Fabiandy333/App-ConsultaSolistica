@@ -1,0 +1,32 @@
+:root{
+    --mandarina: #FF8201;
+    --purpura: #743BBC;
+    --azulClaro: #00B5FF;
+    --verde: #84BD00;
+
+    --azulOscuro: #043C5C;    
+    --blanco: #FFFFFF;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 16px; /* 1rem = 10 px*/
+    /* estes html y body los utilizo para proporcionar las pagina y utilizar medidas en REM*/
+    font-family: 'Courier New', Courier, monospace; /* -> fuentes en google font*/
+    /*font-family: 'Indie Flower', cursive; /* -> fuente de servidores de google*/
+}
+
+.titulo {
+     text-align: center;
+     font-size: 3.8rem;
+     font-family: 'Indie Flower', cursive; /* -> fuente de servidores de google*/
+}
+
+.titulo span {
+    font-size: 2rem;
+    
+}
