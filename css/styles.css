@@ -3,6 +3,7 @@
     --purpura: #743BBC;
     --azulClaro: #00B5FF;
     --verde: #84BD00;
+    --verdeOscuro: #228847;
 
     --azulOscuro: #043C5C;    
     --blanco: #FFFFFF;
@@ -20,13 +21,207 @@ body{
     /*font-family: 'Indie Flower', cursive; /* -> fuente de servidores de google*/
 }
 
-.titulo {
-     text-align: center;
-     font-size: 3.8rem;
-     font-family: 'Indie Flower', cursive; /* -> fuente de servidores de google*/
+h1 {
+    font-size: 3.8rem;
+    text-align: center;
 }
+
+h2 {
+    font-size: 2.8rem;
+    text-align: left;
+}
+
+h3 {
+    font-size: 1.8rem;
+    text-align: left;
+}
+h1,h2,h3 {
+    font-family: 'Indie Flower', cursive; /* -> fuente de servidores de google*/
+}
+
 
 .titulo span {
     font-size: 2rem;
+}
+
+.contenedor {
+    width: 120rem;
+    margin-top: 0; /* margen de la barra para el lado de arriba*/
+    margin-right: auto; /* el margen de la barra la toma automaticamente lado derecho*/
+    margin-bottom: 0; /* margen de la barra para el lado de abajo*/
+    margin-left: auto; /* el margen de la barra la toma automaticamente lado isquierdo para centrar*/
+}
+
+/*
+
+.boton {                                    
+    background-color: var(--verdeOscuro);
+    color: var(--blanco);
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    text-align: center;
+} 
+
+*/
+.nav-bg {
+    background-color: var(--verde); /* Color fondo barra de navegacion*/
+}
+.navegacion-principal {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none; /* quitar raya de navegacion debajo*/
+    font-size: 1.5rem;
+    font-weight: bold; /* Negrilla*/
+    padding: 1rem;
+}
+
+
+.navegacion-principal a:hover{ /* cuando se pasa el mouse por encima de la barra de navegación */
+    background-color: var(--blanco);
+    color: black;
+}
+
+
+/* ------------------ ESTILO BOTON ------------------*/
+
+/* CSS */
+.boton {
+  appearance: button;
+  background-color: var(--verdeOscuro);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
+  border: 1px solid var(--verdeOscuro);
+  border-radius: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,rgba(46, 54, 80, 0.075) 0 1px 1px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  padding: .5rem 1rem;
+  text-align: center;
+  text-transform: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.boton:focus:not(:focus-visible),
+.boton:focus {
+  outline: 0;
+}
+
+.boton:hover {
+  background-color: #3733E5;
+  border-color: #3733E5;
+}
+
+.boton:focus {
+  background-color: #413FC5;
+  border-color: #3E3BBA;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px, rgba(104, 101, 235, 0.5) 0 0 0 .2rem;
+}
+
+.boton:active {
+  background-color: #3E3BBA;
+  background-image: none;
+  border-color: #3A38AE;
+  box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
+}
+
+.boton:active:focus {
+  box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset, rgba(104, 101, 235, 0.5) 0 0 0 .2rem;
+}
+
+.boton:disabled {
+  background-image: none;
+  box-shadow: none;
+  opacity: .65;
+  pointer-events: none;
+}
+/* ------------------ FIN ESTILO BOTON ------------------*/
+/* Estilos básicos de la barra de navegación */
+
+nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Estilo para los elementos de la barra de navegación al pasar el mouse sobre ellos */
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+/* Estilo para el botón que activa el menú desplegable */
+.dropdown .dropbtn {
+    font-size: 15px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    font-weight: bold; /* Negrilla*/
+}
+
+/* Estilo para los elementos del menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Estilo para los elementos del menú desplegable al pasar el mouse sobre ellos */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Estilo para el elemento del menú desplegable al pasar el mouse sobre él */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Mostrar el menú desplegable cuando se pasa el mouse sobre el botón */
+.dropdown:hover .dropdown-content {
+    display: block; 
     
 }
+
+.dropdown:hover .dropbtn {
+    background-color: var(--blanco);
+    color: black;
+}
+
+
+

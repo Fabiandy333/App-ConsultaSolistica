@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Seguimiento Papel</title>
-
-    <script src="server.js"> </script>
+    <title>Tableros BI</title>
 
     <link rel="preload" href="css/normalize.css" as="styles">
     <link href="css/normalize.css" rel="stylesheet">
@@ -17,7 +15,6 @@
 
     <link rel="preload" href="css/styles.css" as="styles">
     <link href="css/styles.css" rel="stylesheet">
-
     
 </head>
 
@@ -68,75 +65,39 @@
                 <br>
                 Ubicación Impresora </a>
 
-                <div class="dropdown">
+                    <div class="dropdown">
 
-                    <button class="dropbtn">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chart-histogram" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#228847" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M3 3v18h18" />
-                            <path d="M20 18v3" />
-                            <path d="M16 16v5" />
-                            <path d="M12 13v8" />
-                            <path d="M8 16v5" />
-                            <path d="M3 11c6 0 5 -5 9 -5s3 5 9 5" />
-                          </svg>
-                          <br>                                 
-                        Tableros BI 
-                        <!-- Flecha hacia abajo para indicar que es un menú desplegable -->
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="https://app.powerbi.com/groups/me/reports/2b0a1744-9550-4556-ad98-741ed0135820/ReportSection?experience=power-bi" target="_blank">Seguimiento De Tóner</a>
-                        <a href="https://app.powerbi.com/groups/me/reports/7aa96884-4276-4f5c-a462-368430bbae03/ReportSection?experience=power-bi" target="_blank">Volumenes De Impresión</a>
-                        <a href="#service3">Alertas Impresoras</a>
+                        <button class="dropbtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chart-histogram" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#228847" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M3 3v18h18" />
+                                <path d="M20 18v3" />
+                                <path d="M16 16v5" />
+                                <path d="M12 13v8" />
+                                <path d="M8 16v5" />
+                                <path d="M3 11c6 0 5 -5 9 -5s3 5 9 5" />
+                              </svg>
+                              <br>                                 
+                            Tableros BI 
+                            <!-- Flecha hacia abajo para indicar que es un menú desplegable -->
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="https://app.powerbi.com/groups/me/reports/2b0a1744-9550-4556-ad98-741ed0135820/ReportSection?experience=power-bi" target="_blank">Seguimiento De Tóner</a>
+                            <a href="https://app.powerbi.com/groups/me/reports/7aa96884-4276-4f5c-a462-368430bbae03/ReportSection?experience=power-bi" target="_blank">Volumenes De Impresión</a>
+                            <a href="#service3">Alertas Impresoras</a>
+                        </div>
                     </div>
-                </div>
 
-            
+
         </nav>
+
+
 
     </div>
     <main>
-        <h2>Seguimiento de Remesas Papeleria Sedes TQ</h2>
+        <h2>Tableros Power BI</h2>
 
-        <input type="file" id="fileInput">
-        <button class="boton" onclick="processRemesas()">Procesar Remesas</button>
-    
-        <table id="resultTable">
-            <tr>
-                <th>Número de Remesa</th>
-                <!-- Agrega más encabezados según tus datos extraídos -->
-            </tr>
-        </table>
-
-        <!-- Aqui Codigo JS -->
-        <script>                                                
-            async function processRemesas() {
-                const fileInput = document.getElementById("fileInput");
-                const filePath = fileInput.files[0].path;
-                const response = await fetch("/process-remesas", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({ filePath })
-                });
-    
-                if (response.ok) {
-                    const data = await fetch("/remesa-data").then(res => res.json());
-                    const table = document.getElementById("resultTable");
-                    table.innerHTML = ""; // Limpiar tabla antes de agregar nuevos datos
-    
-                    data.forEach(item => {
-                        const row = table.insertRow();
-                        row.insertCell().textContent = item.nRemesa;
-                        // Agrega más celdas según tus datos extraídos
-                    });
-                } else {
-                    alert("Error al procesar las remesas.");
-                }
-            }
-        </script>
         
 
     </main>

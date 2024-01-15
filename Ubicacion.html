@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Seguimiento Papel</title>
-
-    <script src="server.js"> </script>
+    <title>Ubicación Impresoras</title>
 
     <link rel="preload" href="css/normalize.css" as="styles">
     <link href="css/normalize.css" rel="stylesheet">
@@ -17,7 +15,6 @@
 
     <link rel="preload" href="css/styles.css" as="styles">
     <link href="css/styles.css" rel="stylesheet">
-
     
 </head>
 
@@ -97,46 +94,8 @@
 
     </div>
     <main>
-        <h2>Seguimiento de Remesas Papeleria Sedes TQ</h2>
+        <h2>Ubicación Impresoras TQ</h2>
 
-        <input type="file" id="fileInput">
-        <button class="boton" onclick="processRemesas()">Procesar Remesas</button>
-    
-        <table id="resultTable">
-            <tr>
-                <th>Número de Remesa</th>
-                <!-- Agrega más encabezados según tus datos extraídos -->
-            </tr>
-        </table>
-
-        <!-- Aqui Codigo JS -->
-        <script>                                                
-            async function processRemesas() {
-                const fileInput = document.getElementById("fileInput");
-                const filePath = fileInput.files[0].path;
-                const response = await fetch("/process-remesas", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({ filePath })
-                });
-    
-                if (response.ok) {
-                    const data = await fetch("/remesa-data").then(res => res.json());
-                    const table = document.getElementById("resultTable");
-                    table.innerHTML = ""; // Limpiar tabla antes de agregar nuevos datos
-    
-                    data.forEach(item => {
-                        const row = table.insertRow();
-                        row.insertCell().textContent = item.nRemesa;
-                        // Agrega más celdas según tus datos extraídos
-                    });
-                } else {
-                    alert("Error al procesar las remesas.");
-                }
-            }
-        </script>
         
 
     </main>
