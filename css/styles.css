@@ -19,6 +19,7 @@ body{
     /* estes html y body los utilizo para proporcionar las pagina y utilizar medidas en REM*/
     font-family: 'Courier New', Courier, monospace; /* -> fuentes en google font*/
     /*font-family: 'Indie Flower', cursive; /* -> fuente de servidores de google*/
+    background-image: linear-gradient(to top, #DFE9F3 0%, var(--blanco) 100% );
 }
 
 h1 {
@@ -205,11 +206,13 @@ nav a:hover {
     text-decoration: none;
     display: block;
     text-align: left;
+    
 }
 
 /* Estilo para el elemento del menú desplegable al pasar el mouse sobre él */
 .dropdown-content a:hover {
     background-color: #ddd;
+    display: block;
 }
 
 /* Mostrar el menú desplegable cuando se pasa el mouse sobre el botón */
@@ -223,5 +226,51 @@ nav a:hover {
     color: black;
 }
 
+/* Configuraciones Formulario */
+.formulario {
+    background-color: var(--blanco);
+    width: min(60rem,100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--verdeOscuro);
+
+}
+
+.contenedor-campos {
 
 
+}
+
+.campo {
+    margin-bottom: 1rem;
+
+}
+
+.campo label{
+    color: var(--azulOscuro);
+    font-weight:  bold;
+    margin-bottom:  .5rem;
+    display: block;
+
+}
+
+.campo-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}

@@ -96,66 +96,103 @@
     <main>
         <h2>Configuracion Impresora</h2>
 
-        <form>
+        <form class="formulario">
+
+            <div class="contenedor-campos">            
 
             <fieldset>
                 <legend>Información Requerida Para configuración</legend>
 
-                <label>Ip Impresora</label>
-                <input type="text" placeholder="Ip">
-                <label>Modelo Impresora</label>
-                <input type="text" placeholder="Modelo">
+                <div class="campo">
+                    <label>Ip Impresora</label>
+                    <input class="input-text" type="text" placeholder="Ip">
+                </div>
+                <div class="campo">
+                    <label>Modelo Impresora</label>
+                    <input class="input-text" type="text" placeholder="Modelo">
+                </div>
+                
             </fieldset>
 
             <fieldset>
                 <legend>Configuración Densidad De Tóner</legend>
 
+                <div class="campo">
                 <label>Densidad Impresora</label>
-                <input type="number" placeholder="Densidad">
+                <input class="input-text" type="number" placeholder="Densidad">
                 <span>%</span>
                 <input class="boton" type="submit" value="Aplicar">
+                </div>
                 
             </fieldset>
             
             <fieldset>
                 <legend>Configuración Basica Información</legend>
+                
+                <div class="campo">
+                    <label>Nombre Impresora</label>
+                    <input class="input-text" type="text" placeholder="Nombre">
+                </div>
+                <div class="campo">
+                    <label>Ubicación Impresora</label>
+                    <input class="input-text" type="text" placeholder="Ubicación">
+                    <input class="boton" type="submit" value="Aplicar">
+                </div> 
+            
+            </fieldset>
+            
+            <fieldset>
 
-                <label>Nombre Impresora</label>
-                <input type="text" placeholder="Nombre">
-                <label>Ubicación Impresora</label>
-                <input type="text" placeholder="Ubicación">
-                <input class="boton" type="submit" value="Aplicar">
-                <label>Configuración Credenciales Administrador</label>
-                <input class="boton" type="submit" value="Aplicar">
+                <legend>Configuración Credenciales Administrador</legend>
+
+                <div class="campo">
+                    <input class="boton" type="submit" value="Aplicar">
+                </div>
+
 
             </fieldset>
+            
 
             <fieldset>
                 <legend>Configuración Servidor Correo SMTP</legend>
 
-                <input class="boton" type="submit" value="Aplicar" >
+                <div class="campo">
+                    <input class="boton" type="submit" value="Aplicar" >
+                </div>
             </fieldset>
 
             <fieldset>
                 <legend>Habilitar Contactos</legend>
-                <input class="boton" type="submit" value="Aplicar">
+
+                <div class="campo">
+                    <input class="boton" type="submit" value="Aplicar">
+                </div>
             </fieldset>
 
             <fieldset>
                 <legend>Configuración Identificación De La Red</legend>
-                <input class="boton" type="submit" value="Aplicar">
+
+                <div class="campo">
+                    <input class="boton" type="submit" value="Aplicar">
+                </div>
             </fieldset>
 
             <fieldset>
                 <legend>Configuración De Red SNMP</legend>
-                <input class="boton" type="submit" value="Aplicar">
+
+                <div class="campo">
+                    <input class="boton" type="submit" value="Aplicar">
+                </div>
             </fieldset>
 
             <fieldset>
                 <legend>Configuración De Comunicación Segura</legend>
-                <input class="boton" type="submit" value="Aplicar">
-            </fieldset>
 
+                <div class="campo">
+                    <input class="boton" type="submit" value="Aplicar">
+                </div>
+            </fieldset>
+            </div> <!-- contenedor de los campos-->
         </form>
 
     </main>
